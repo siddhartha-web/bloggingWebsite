@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>yourBook</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand">yourBook</p>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home"><a href="/posts/<%=userId%>">HOME</a></li>
+          <li id="about"><a href="/login">login</a></li>
+          <li id="contact"><a href="/register">register</a></li>
+            <li id="compose"><a href="/posts/<%=userId%>/compose">COMPOSE</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container page-wrap">
+<h1>Compose</h1>
+
+
+<form class="form" action="/" method="post">
+   <input type="hidden" name="userId" value="<%= userId %>">
+  <label for="Title">Title</label>
+<div class="">
+
+  <textarea name="title" rows="1" cols="80"></textarea>
+</div>
+  <label for="Post">Post</label>
+  <div class="">
+      <textarea name="body" rows="5" cols="80"></textarea>
+  </div>
+
+  <button class="Publish" type="submit" name="button">Publish</button>
+</form>
+<%-include("partials/footer")-%>
